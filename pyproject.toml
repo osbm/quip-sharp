@@ -27,7 +27,7 @@ classifiers = [
 ]
 dependencies = [
     "datasets",
-    "fast-hadamard-transform",
+    "fast-hadamard-transform@git+https://github.com/osbm/fast-hadamard-transform",
     "flash-attn",
     "glog",
     "lm-eval",
