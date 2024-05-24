@@ -1,11 +1,15 @@
 [build-system]
 requires = [
     "setuptools >= 61.0",
+    "wheel"
 ]
 build-backend = "setuptools.build_meta"
 
+[tool.setuptools.packages.find]
+include = ["quip*"]
+
 [project]
-name = "quip_sharp"
+name = "quip"
 version = "1.0.0"
 authors = [
   { name="Albert Tseng", email="albert@cs.cornell.edu" },
@@ -29,7 +33,6 @@ dependencies = [
     "lm-eval",
     "numpy",
     "primefac",
-    "quiptools-cuda",
     "torch >= 2",
     "tqdm",
     "transformers >= 4.36.0",
