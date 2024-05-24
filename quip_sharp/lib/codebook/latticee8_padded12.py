@@ -8,11 +8,11 @@ The total codebook is all 2^7 flips of these 256 entries (2^15) +- 1/4
 which makes 2^16 entries.
 This corresponds to a subset of E8 + 1/4
 """
-import quiptools
+import quiptools_cuda
 import torch
 from torch import nn
 
-from quip.lib.utils.matmul_had import matmul_hadU_cuda, matmul_hadUt_cuda
+from quip_sharp.lib.utils.matmul_had import matmul_hadU_cuda, matmul_hadUt_cuda
 
 _E8P_CODESZ = 8
 

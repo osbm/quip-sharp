@@ -9,8 +9,8 @@ import glog
 import torch
 from tqdm import tqdm
 
-from quip.lib.utils import gptq_data_utils
-from quip.lib.utils.unsafe_import import model_from_hf_path
+from quip_sharp.lib.utils import gptq_data_utils
+from quip_sharp.lib.utils.unsafe_import import model_from_hf_path
 
 torch.set_grad_enabled(False)
 

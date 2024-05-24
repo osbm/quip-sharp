@@ -19,9 +19,9 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers.modeling_attn_mask_utils import \
     _prepare_4d_causal_attention_mask
 
-from quip.lib import codebook, utils
-from quip.lib.algo import finetune, quip
-from quip.lib.utils.unsafe_import import model_from_hf_path
+from quip_sharp.lib import codebook, utils
+from quip_sharp.lib.algo import finetune, quip
+from quip_sharp.lib.utils.unsafe_import import model_from_hf_path
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--seed', default=0, type=int)

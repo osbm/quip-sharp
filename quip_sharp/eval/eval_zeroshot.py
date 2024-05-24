@@ -9,8 +9,8 @@ import torch
 from lm_eval import evaluator, tasks
 from transformers import AutoTokenizer
 
-from quip.lib.utils import LMEvalAdaptor
-from quip.lib.utils.unsafe_import import model_from_hf_path
+from quip_sharp.lib.utils import LMEvalAdaptor
+from quip_sharp.lib.utils.unsafe_import import model_from_hf_path
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--seed', default=0, type=int)

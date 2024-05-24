@@ -6,10 +6,10 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
-include = ["quip*"]
+include = ["quip_sharp*"]
 
 [project]
-name = "quip"
+name = "quip_sharp"
 version = "1.0.0"
 authors = [
   { name="Albert Tseng", email="albert@cs.cornell.edu" },

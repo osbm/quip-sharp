@@ -1,8 +1,8 @@
 import torch
 import torch.nn as nn
 
-from quip.lib import codebook
-from quip.lib.utils import clean, dtype_from_str, get_hadK
+from quip_sharp.lib import codebook
+from quip_sharp.lib.utils import clean, dtype_from_str, get_hadK
 
 
 class QuantizedLinear(nn.Module):
