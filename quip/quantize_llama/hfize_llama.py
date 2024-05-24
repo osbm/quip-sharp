@@ -6,10 +6,10 @@ import glog
 import torch
 from transformers import AutoTokenizer
 
-from quip_sharp.lib import codebook, utils
-from quip_sharp.lib.utils.unsafe_import import model_from_hf_path
-from quip_sharp.model.llama import LlamaForCausalLM
-from quip_sharp.lib.utils.model_version import MODEL_VERSION
+from quip.lib import codebook, utils
+from quip.lib.utils.unsafe_import import model_from_hf_path
+from quip.model.llama import LlamaForCausalLM
+from quip.lib.utils.model_version import MODEL_VERSION
 
 torch.set_grad_enabled(False)
 

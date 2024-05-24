@@ -8,8 +8,8 @@ import glog
 import torch
 from torch import nn
 
-from quip_sharp.lib import codebook, utils
-from quip_sharp.lib.linear import *
+from quip.lib import codebook, utils
+from quip.lib.linear import *
 
 from . import quip
 

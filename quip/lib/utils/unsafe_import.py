@@ -5,7 +5,7 @@ import os
 
 import transformers
 
-from quip_sharp.model.llama import LlamaForCausalLM
+from quip.model.llama import LlamaForCausalLM
 
 from . import graph_wrapper
 

@@ -12,7 +12,7 @@ import quiptools
 import torch
 from torch import nn
 
-from quip_sharp.lib.utils.matmul_had import matmul_hadU_cuda, matmul_hadUt_cuda
+from quip.lib.utils.matmul_had import matmul_hadU_cuda, matmul_hadUt_cuda
 
 _E8P_CODESZ = 8
 

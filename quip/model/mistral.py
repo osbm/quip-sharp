@@ -52,9 +52,9 @@ if is_flash_attn_2_available():
     _flash_supports_window_size = "window_size" in list(
         inspect.signature(flash_attn_func).parameters)
 
-from quip_sharp.lib.linear.fused_quantized_linear import FusedQuantizedLinear
-from quip_sharp.lib.linear.quantized_linear import QuantizedLinear
-from quip_sharp.lib.utils import check_model_version
+from quip.lib.linear.fused_quantized_linear import FusedQuantizedLinear
+from quip.lib.linear.quantized_linear import QuantizedLinear
+from quip.lib.utils import check_model_version
 
 logger = logging.get_logger(__name__)
 

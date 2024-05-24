@@ -5,7 +5,7 @@ import torch
 from datasets import load_dataset
 from torch.utils.data import DataLoader, Dataset
 
-from quip_sharp.lib import codebook
+from quip.lib import codebook
 
 from .matmul_had import matmul_hadU
 
