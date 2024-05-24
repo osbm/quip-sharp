@@ -15,7 +15,7 @@ mkdir -p $LOG
 
 # quantize with finetuning
 python3 \
-    -m quip_sharp.quantize_llama.quantize_finetune_llama \
+    -m quip.quantize_llama.quantize_finetune_llama \
     --save_path $CKPT/2_7b_2bit \
     --codebook E8P12 \
     --scale_override 0.9 \
@@ -30,7 +30,7 @@ python3 \
 
 # convert model to hf format for end to end fine tuning
 CUDA_VISIBLE_DEVICES=0 python3 \
-    -m quip_sharp.quantize_llama.hfize_llama \
+    -m quip.quantize_llama.hfize_llama \
     --quantized_path $CKPT/2_7b_2bit \
     --hf_output_path $HF/2_7b_2bit \
     2>&1 \
@@ -39,7 +39,7 @@ CUDA_VISIBLE_DEVICES=0 python3 \
 
 # end to end fine tuning
 # python3 \
-#     -m quip_sharp.quantize_llama.finetune_e2e_llama \
+#     -m quip.quantize_llama.finetune_e2e_llama \
 #     --base_model meta-llama/Llama-2-7b-hf \
 #     --hf_path $HF/2_7b_2bit \
 #     --devset_size 384 \
@@ -56,20 +56,20 @@ CUDA_VISIBLE_DEVICES=0 python3 \
 
 # eval
 CUDA_VISIBLE_DEVICES=0 python3 \
-    -m quip_sharp.quantize_llama.hfize_llama \
+    -m quip.quantize_llama.hfize_llama \
     --quantized_path $CKPT/2_7b_2bit \
     --hf_output_path $HF/2_7b_2bit \
     2>&1 \
     | tee -a $LOG/2_7b_2bit
 
 CUDA_VISIBLE_DEVICES=0 python3 \
-    -m quip_sharp.eval.eval_ppl \
+    -m quip.eval.eval_ppl \
     --hf_path $HF/2_7b_2bit \
     2>&1 \
     | tee -a $LOG/2_7b_2bit
 
 CUDA_VISIBLE_DEVICES=0 python3 \
-    -m quip_sharp.eval.eval_zeroshot \
+    -m quip.eval.eval_zeroshot \
     --tasks arc_challenge,arc_easy,boolq,piqa,winogrande \
     --batch_size 4 \
     2>&1 \
