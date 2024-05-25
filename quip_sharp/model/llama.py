@@ -61,9 +61,9 @@ if is_torch_fx_available():
     _prepare_4d_causal_attention_mask = torch.fx.wrap(
         _prepare_4d_causal_attention_mask)
 
-from lib.linear.fused_quantized_linear import FusedQuantizedLinear
-from lib.linear.quantized_linear import QuantizedLinear
-from lib.utils import check_model_version
+from quip_sharp.lib.linear.fused_quantized_linear import FusedQuantizedLinear
+from quip_sharp.lib.linear.quantized_linear import QuantizedLinear
+from quip_sharp.lib.utils import check_model_version
 
 logger = logging.get_logger(__name__)
 

@@ -12,9 +12,9 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers.modeling_attn_mask_utils import \
     _prepare_4d_causal_attention_mask
 
-from lib import codebook, utils
-from lib.algo import finetune, quip
-from lib.linear import FusedLinear
+from quip_sharp.lib import codebook, utils
+from quip_sharp.lib.algo import finetune, quip
+from quip_sharp.lib.linear import FusedLinear
 from model.llama import LlamaDecoderLayer
 
 parser = argparse.ArgumentParser()

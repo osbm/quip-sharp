@@ -7,7 +7,7 @@ import torch
 from torch.profiler import ProfilerActivity, profile, record_function
 from transformers import AutoTokenizer
 
-from lib.utils.unsafe_import import model_from_hf_path
+from quip_sharp.lib.utils.unsafe_import import model_from_hf_path
 
 torch.set_grad_enabled(False)
 

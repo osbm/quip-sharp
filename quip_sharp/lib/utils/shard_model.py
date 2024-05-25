@@ -54,8 +54,8 @@ class ShardTransformer(nn.Module):
         self.shards = nn.ModuleList([_['shard'] for _ in shards])
         self.devices = [_['device'] for _ in shards]
 
-        from lib.linear.fused_quantized_linear import FusedQuantizedLinear
-        from lib.linear.quantized_linear import QuantizedLinear
+        from quip_sharp.lib.linear.fused_quantized_linear import FusedQuantizedLinear
+        from quip_sharp.lib.linear.quantized_linear import QuantizedLinear
         for name, module in self.shards.named_modules():
             if isinstance(module, QuantizedLinear) or isinstance(
                     module, FusedQuantizedLinear):

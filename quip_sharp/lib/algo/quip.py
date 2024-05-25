@@ -5,7 +5,7 @@ import glog
 import torch
 from tqdm import tqdm
 
-from lib import utils
+from quip_sharp.lib import utils
 
 
 def RHT_H(H, SU):

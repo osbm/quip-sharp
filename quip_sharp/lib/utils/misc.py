@@ -56,7 +56,7 @@ class ForkedPdb(pdb.Pdb):
     """A Pdb subclass that may be used
     from a forked multiprocessing child
     use as:
-    from lib import utils
+    from quip_sharp.lib import utils
     utils.ForkedPdb().set_trace()
     """
 
